@@ -1,0 +1,350 @@
+
+/* Body */
+body {
+  font-family: "Press Start 2P", system-ui;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 14px;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Header and Footer */
+.encabezado{
+  background-color: #5D04D9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 0 25px;
+  z-index: 2;
+}
+
+.aluraLogo {
+  width: 374px;
+  height: 56px;
+  cursor: pointer;
+}
+
+/* Main */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+  border-top: 0.5em solid #D6D6D6;
+}
+
+
+
+.mensaje__titulo,
+.product__precio,
+.formulario__campo,
+.product__item,
+.footer h3,
+.footer h4{
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.imagen-back{
+  width: 60px;
+}
+
+/* Products Section */
+.products {
+  width: 50%;
+  height: 100%;
+  margin: 0 0 0 2%;
+  padding: 0 1% 0 1%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+
+}
+
+.products__titulo, .mensaje__titulo, .formulario__titulo {
+  font-size: 24px;
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
+  height: auto;
+  margin: 5%;
+}
+
+
+.products__container{
+  height: 50vh;
+  overflow-y: auto;
+  box-shadow: -12px 10px 5.8px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  
+}
+
+.products__scroll__container::-webkit-scrollbar {
+  width: 10px;
+
+}
+
+.products__scroll__container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.products__scroll__container::-webkit-scrollbar-thumb {
+  background: #D6D6D6;
+  border-radius: 10px;
+  height: 10px;
+}
+
+.products__scroll__container::-webkit-scrollbar-thumb:hover {
+  background: #9b9999
+  ;
+}
+
+
+.product__item {
+  background-color: #5D04D9;
+  border-radius: 10px;
+  box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25);
+  min-width: 200px;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  border: 3px solid black;
+  height: 258px;
+  width: 196px;
+}
+
+.product__item:hover {
+  transform: translateY(-10px);
+}
+
+.product__img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.product__info {
+  padding: 0.5rem;
+  text-align: start;
+}
+
+.product__titulo {
+  margin-bottom: 0.5rem;
+  text-align: start;
+  font-size: 15px;
+}
+
+.product__precio__bloque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5e17eb;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.product__delete {
+  cursor: pointer;
+}
+
+.product__delete i {
+  color: #fff;
+
+}
+
+.mensaje__error__titulo{
+  color: red;
+}
+
+/* Formulario Section */
+.formulario {
+  width: 45%;
+}
+
+.container__formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+
+}
+
+.formulario__campo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.campo__etiqueta {
+  padding: 0 0 .1em 1em;
+}
+
+.campo__escrita {
+  padding: 1em;
+  border: 2px solid #03318C;
+  border-radius: 40px;
+  font-size: 1rem;
+  color: #03318C;
+  width: 35vw;
+  font-weight: 500;
+
+}
+
+input::placeholder {
+  color: #03318C;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  width: 100%;
+}
+
+.formulario__boton {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  background-color: #03318C;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 2em 0;
+  font-weight: 500;
+  width: 188px;
+  height: 55px;
+  text-align: center;
+}
+
+.formulario__boton.limpiar {
+  background-color: #fff;
+  color: #03318C;
+  border: 3px solid #03318C;
+
+}
+
+/* Footer */
+.footer, .footer, .footer-concluido {
+  background-color: #5e17eb;
+  width: 100%;
+  height: 232px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0px -10px 9.5px rgba(0, 0, 0, 0.25);
+
+}
+
+.footer h3, .footer h4 {
+  font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif;
+  margin: 0.5rem 0;
+}
+
+.footer h4 {
+  font-weight: 100;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products {
+    width: 100%;
+  }
+
+  .formulario {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .campo__escrita {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    height: auto;
+  }
+
+  .aluraLogo {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main {
+    flex-direction: column-reverse;
+    width: 100%;
+    padding: 0;
+  }
+
+  .campo__escrita {
+    width: 150%;
+  }
+
+  .botones{
+    gap: 5%;
+  }
+
+  .formulario__boton{
+    width: 164px;
+    height: 55px;
+    text-align: center;
+  }
+
+
+
+.products__scroll__container{
+    height: auto;
+    overflow-x: auto;
+    overflow-y:hidden;
+    box-shadow: none;
+
+  }
+
+
+.products__container {
+    display: flex;
+    gap: 1rem;
+    padding: 0 0 10% 3%;
+
+  }
+
+  .product__item {
+    width: calc(50vw - 2rem);
+  }
+
+  .footer {
+    width: 100%;
+    height: 168px;
+  }
+
+  .footer img{
+    padding-bottom: 0;
+    height: 56px;
+  }
+}

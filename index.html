@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>AluraGeek</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="encabezado">
+            <img class="aluraLogo" src="/img/Logo.svg" alt="aluraLogo" />
+        </nav>
+
+    </header>
+    <main class="main">
+        <!-- Bloque 1 -->
+        <section class="products">
+            <h1 class="products__titulo">MIS PRODUCTOS:</h1>
+            <div class="products__container" alt="products alura" data-lista>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <form class="container__formulario" data-formulario>
+                <h1 class="formulario__titulo">AGREGAR<br>PRODUCTO :</h1>
+                
+                    <div class="formulario__campo">
+                        <label class="campo__etiqueta" for="nombre"></label>
+                        <input name="nombre" class="campo__escrita" required
+                            type="text" placeholder="nombre..." id='nombre' data-nombre />
+                    </div>
+    
+                    <div class="formulario__campo">
+                        <label class="campo__etiqueta" for="precio"></label>
+                        <input name="titulo" class="campo__escrita" required 
+                            type="number" placeholder="precio..." id='precio' data-precio />
+                    </div>
+    
+                    <div class="formulario__campo">
+                        <label class="campo__etiqueta" for="imagen"></label>
+                        <input name="imagen" class="campo__escrita" 
+                            type="url" placeholder="imagen..." id='imagen' data-imagen />
+                    </div>
+                    <div class="botones">
+                    <input class="formulario__boton enviar" type="submit" />
+                    <input class="formulario__boton limpiar" type="button" id="limpiar"  value="Limpiar" />
+                    </div>
+            </form>
+
+
+        </section>
+    </main>
+    <footer class="footer">
+        <img class="aluraLogo" src="/img/Logo.svg" alt="aluraLogo" />
+        <h3>DESARROLLADO POR LUCIANA E URRISTI</h3>
+        <h4>ALURA LATAM - 2024</h4>
+    </footer>
+
+    
+    <script src="./js/conexionAPI.js" type="module"></script>
+    <script src="./js/crearProducto.js" type="module"></script>
+    <script src="./js/limpiarCampos.js" type="module"></script>
+    <script src="./js/mostrarProductos.js" type="module"></script>
+    <script src="./js/eliminarProducto.js" type="module"></script>
+</body>
+
+</html>
